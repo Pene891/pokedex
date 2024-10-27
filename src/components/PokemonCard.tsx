@@ -1,3 +1,4 @@
+import { useState } from "react";
 interface Hipokemon {
   name: string;
   imgSrc?: string;
@@ -8,12 +9,12 @@ function PokemonCard({ pokemon }: Hipokemon) {
   // console.log (pokemon)
   return (
     <figure>
-      {pokemon[0].imgSrc ? (
-        <img src={pokemon[0].imgSrc} alt={pokemon[0].name} />
+      {pokemon.imgSrc ? (
+        <img src={pokemon.imgSrc} alt={pokemon.name} />
       ) : (
         <p>???</p>
       )}
-      <figcaption>{pokemon[0].name}</figcaption>
+      <figcaption>{pokemon.name}</figcaption>
     </figure>
   );
 }
